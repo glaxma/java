@@ -14,7 +14,7 @@ bat 'mvn package'
 }
 stage('results'){
 steps{
-   cucumber '**/*.json'
+   junit '**/target/*.xml'
         archiveArtifacts '**/target/*.jar'
 }
 }
