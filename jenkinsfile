@@ -14,7 +14,7 @@ bat 'mvn package'
 }
 stage('results'){
 steps{
-   junit '**/target/*.xml'
+   junit '**/surefire-reports/TEST-*.xml'
         archiveArtifacts '**/target/*.jar'
 }
 }
