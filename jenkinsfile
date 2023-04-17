@@ -1,0 +1,22 @@
+pipeline{
+agent any
+stages{
+stage('vcs'){
+steps{
+git url :'https://github.com/glaxma/cucumber' ,
+branch : 'dev'
+}
+}
+stage('build'){
+steps{
+bat 'mvn package'
+}
+}
+stage('results'){
+steps{
+   cucumber '**/*.json'
+        archiveArtifacts '**/target/*.jar'
+}
+}
+}
+}
