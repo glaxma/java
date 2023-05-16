@@ -21,7 +21,7 @@ public class Demo {
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setCapability("se:recordVideo", "true");
         chromeOptions.setCapability("se:timeZone", "IST");
-        driver = new RemoteWebDriver(new URL("http://20.121.223.76:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://20.169.178.252:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
