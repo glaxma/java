@@ -19,7 +19,7 @@ public class Demo {
     public void setUp() throws MalformedURLException {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://20.121.223.76:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
