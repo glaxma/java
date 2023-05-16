@@ -19,6 +19,8 @@ public class Demo {
     public void setUp() throws MalformedURLException {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        chromeOptions.setCapability("se:recordVideo", "true");
+        chromeOptions.setCapability("se:timeZone", "IST");
         driver = new RemoteWebDriver(new URL("http://20.121.223.76:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
