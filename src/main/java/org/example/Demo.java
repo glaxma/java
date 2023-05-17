@@ -21,7 +21,7 @@ public class Demo {
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setCapability("se:recordVideo", "true");
         chromeOptions.setCapability("se:timeZone", "IST");
-        driver = new RemoteWebDriver(new URL("http://20.169.138.87:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
@@ -33,5 +33,34 @@ public class Demo {
             driver.quit();
         }
     }
-
+    @Test
+    public void faceBook() throws MalformedURLException {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        chromeOptions.setCapability("se:recordVideo", "true");
+        chromeOptions.setCapability("se:timeZone", "IST");
+        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
+        driver = new ChromeDriver(chromeOptions);
+        try {
+            driver.manage().window().maximize();
+            driver.get("https://www.facebook.com/");
+        } finally {
+            driver.quit();
+        }
+    }
+    @Test
+    public void gmail() throws MalformedURLException {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        chromeOptions.setCapability("se:recordVideo", "true");
+        chromeOptions.setCapability("se:timeZone", "IST");
+        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
+        driver = new ChromeDriver(chromeOptions);
+        try {
+            driver.manage().window().maximize();
+            driver.get("https://accounts.google.com/");
+        } finally {
+            driver.quit();
+        }
+    }
 }
