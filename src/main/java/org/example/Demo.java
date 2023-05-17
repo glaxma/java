@@ -15,13 +15,13 @@ import java.net.URL;
 
 public class Demo {
     WebDriver driver;
-    @Test
+    @Test(priority=1)
     public void setUp() throws MalformedURLException {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setCapability("se:recordVideo", "true");
         chromeOptions.setCapability("se:timeZone", "IST");
-        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://4.246.213.107:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
@@ -33,13 +33,13 @@ public class Demo {
             driver.quit();
         }
     }
-    @Test
+    @Test(priority=2)
     public void faceBook() throws MalformedURLException {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setCapability("se:recordVideo", "true");
         chromeOptions.setCapability("se:timeZone", "IST");
-        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://4.246.213.107:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
@@ -48,13 +48,13 @@ public class Demo {
             driver.quit();
         }
     }
-    @Test
+    @Test(priority=3)
     public void gmail() throws MalformedURLException {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.setCapability("se:recordVideo", "true");
         chromeOptions.setCapability("se:timeZone", "IST");
-        driver = new RemoteWebDriver(new URL("http://40.117.252.128:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://4.246.213.107:4444/wd/hub"), chromeOptions);
         driver = new ChromeDriver(chromeOptions);
         try {
             driver.manage().window().maximize();
