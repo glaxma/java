@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Renters_Insurance_Automation" thread-count="3">
+    <listeners>
+    </listeners>
+    <test verbose="1" name="OneSiteSanityTest_Automation" preserve-order="false">
+        <classes>
+            <class name="org.example.Demo">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="faceBook"/>
+                    <include name="gmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
