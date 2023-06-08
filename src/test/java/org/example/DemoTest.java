@@ -1,6 +1,5 @@
 package org.example;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +12,8 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Demo {
+public class DemoTest {
+
     WebDriver driver;
     @Test(priority=1)
     public void setUp() throws MalformedURLException {
